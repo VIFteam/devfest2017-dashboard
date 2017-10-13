@@ -4,6 +4,35 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
+import '@stencil/router';
+
+import { VifAdmin as VifAdmin } from './components/vif-admin/vif-admin';
+
+interface HTMLVifAdminElement extends VifAdmin, HTMLElement {
+}
+declare var HTMLVifAdminElement: {
+  prototype: HTMLVifAdminElement;
+  new (): HTMLVifAdminElement;
+};
+declare global {
+  interface HTMLElementTagNameMap {
+      "vif-admin": HTMLVifAdminElement;
+  }
+  interface ElementTagNameMap {
+      "vif-admin": HTMLVifAdminElement;
+  }
+  namespace JSX {
+      interface IntrinsicElements {
+          "vif-admin": JSXElements.VifAdminAttributes;
+      }
+  }
+  namespace JSXElements {
+      export interface VifAdminAttributes extends HTMLAttributes {
+        
+      }
+  }
+}
+
 import { VifCards as VifCards } from './components/vif-cards/vif-cards';
 
 interface HTMLVifCardsElement extends VifCards, HTMLElement {

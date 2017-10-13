@@ -1,9 +1,11 @@
 exports.config = {
   bundles: [
-    { components: ['my-name'] }
-  ],
-  collections: [
-    { name: '@stencil/router' }
+    { components: [
+      'vif-dashboard',
+      'vif-player',
+      'vif-score',
+      'vif-cards'
+    ] }
   ]
 };
 

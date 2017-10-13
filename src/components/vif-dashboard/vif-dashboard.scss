@@ -1,0 +1,30 @@
+vif-dashboard {
+  display: flex;
+  height: 100%;
+
+  .wrapper {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex:1;
+
+      article {
+        flex: 1;
+      }
+
+      aside {
+        width:300px;
+      }
+    }
+
+    footer {
+      height: 200px;
+    }
+
+  }
+}
+

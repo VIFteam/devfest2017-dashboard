@@ -5,10 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Stencil Starter App</title>
   <script src="build/app.js"></script>
+  <style>
+    html,body {
+      height: 100%;
+      margin: 0;
+    }
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.5.1/firebase-firestore.js"></script>
+  <script>
+		// Using firebase as global on window because : https://github.com/ionic-team/stencil/issues/98
+    const config = {
+      apiKey: "AIzaSyDmlDrPNA9x1hbvv_04sVT42VqXxqxv-3Y",
+      authDomain: "devfest-665fa.firebaseapp.com",
+      databaseURL: "https://devfest-665fa.firebaseio.com",
+      projectId: "devfest-665fa",
+      storageBucket: "devfest-665fa.appspot.com",
+      messagingSenderId: "461228377522"
+    };
+    firebase.initializeApp(config);
+  </script>
+
 </head>
 <body>
 
-  <my-name first="Stencil" last="JS"></my-name>
+  <vif-dashboard></vif-dashboard>
 
 </body>
 </html>

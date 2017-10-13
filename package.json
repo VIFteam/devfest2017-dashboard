@@ -7,14 +7,14 @@
     "dist"
   ],
   "scripts": {
+    "st:generate": "node scripts/generate.js",
     "build": "stencil build",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
     "start": "npm run dev"
   },
   "dependencies": {
-    "@stencil/core": "next",
-    "@stencil/router": "0.0.4"
+    "@stencil/core": "next"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",

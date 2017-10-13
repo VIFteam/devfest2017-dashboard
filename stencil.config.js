@@ -6,6 +6,9 @@ exports.config = {
       'vif-score',
       'vif-cards'
     ] }
+  ],
+  collections: [
+    { name: '@stencil/router' }
   ]
 };
 

@@ -10,7 +10,12 @@ export class VifDashboard {
 			<div class="wrapper">
 				<section class="container">
 					<article>
-						<vif-player></vif-player>
+						<stencil-router id='router'>
+							<stencil-route url={['/', '/dashboard']} component='vif-player' exact={true}>
+							</stencil-route>
+							<stencil-route url='/admin' component='vif-admin'>
+							</stencil-route>
+						</stencil-router>
 					</article>
 					<aside>
 						<vif-score></vif-score>

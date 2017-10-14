@@ -19,21 +19,27 @@ export class VifScore {
 		this.db
 			.collection('scores')
 			.orderBy('score', 'desc')
-			.limit(10)
+			.limit(3)
 			.onSnapshot((snapshot) => {
 				this.scores = snapshot.docs.map(doc => doc.data())
 			});
 	}
 
-	renderData(){
-		return this.scores.map(s => <tr><td>{s.mail}</td><td>{s.score}</td></tr>);
-	}
-
 	render() {
-		return (
-			<table>
-				{this.renderData()}
-			</table>
-		);
+		return [
+			<div class="aside">
+				<div class="separator"></div>
+				<div class="scores">
+					{this.scores.map(s => 
+						<div class="bubble">
+							<div>
+								{s.player}
+							</div>
+							<div class="score">{s.score}</div>
+						</div>)}
+				</div>
+			</div>,
+			<img src="/assets/read_the_rules.png" width="450" height="450" alt=""/>
+		];
 	}
 }

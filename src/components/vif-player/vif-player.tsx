@@ -5,6 +5,10 @@ import { Component } from '@stencil/core';
 })
 export class VifPlayer {
 	render() {
-		return (<h1>player</h1>	);
+		return (
+			<video autoplay loop>
+				<source src="/assets/small.mp4" type="video/mp4" />
+			</video>
+		);
 	}
 }

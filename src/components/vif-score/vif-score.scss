@@ -1,2 +1,66 @@
 vif-score {
+  height: 100%;
+  display: block;
+  .aside {
+    display: flex;
+    height: 100%;
+    .separator {
+      display: block;
+      background-color: black;
+      margin: 10% 5px;
+      width:5px;
+      height: 80%;
+      border-radius: 50%;
+    }
+    
+    .scores {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      margin: 1em;
+      div.bubble {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 130px;
+        border-radius: 50%;
+        background-color: white;
+        position: relative;
+        float: left;
+        margin-top: 50px;
+        padding-top: 10px;
+        vertical-align: middle;
+        text-align: center;
+        .score {
+          font-size: 2em;
+        }
+        &.bubble:before {
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          content: "";
+          position: absolute;
+          top: 98%;
+          right: 20%;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: white;
+        }
+        &.bubble:after {
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+          content: "";
+          position: absolute;
+          top: 110%;
+          right: 12%;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: white;
+        }
+      }
+    }
+  }
+  img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  } 
 }

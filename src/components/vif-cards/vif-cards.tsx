@@ -5,6 +5,8 @@ import { Component } from '@stencil/core';
 })
 export class VifCards {
 	render() {
-		return (<h1>cards</h1>);
+		return [
+			<h2>cards</h2>
+		];
 	}
 }

@@ -17,13 +17,13 @@ export class VifDashboard {
 							</stencil-route>
 						</stencil-router>
 					</article>
-					<aside>
-						<vif-score></vif-score>
-					</aside>
+					<footer>
+						<vif-cards></vif-cards>
+					</footer>
 				</section>
-				<footer>
-					<vif-cards></vif-cards>
-				</footer>
+				<aside>
+					<vif-score></vif-score>
+				</aside>
 			</div>
 		);
 	}

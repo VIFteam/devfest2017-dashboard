@@ -19,7 +19,7 @@ export class VifScore {
 		this.db
 			.collection('scores')
 			.orderBy('score', 'desc')
-			.limit(3)
+			.limit(5)
 			.onSnapshot((snapshot) => {
 				this.scores = snapshot.docs.map(doc => doc.data())
 			});
@@ -39,7 +39,7 @@ export class VifScore {
 						</div>)}
 				</div>
 			</div>,
-			<img src="/assets/read_the_rules.png" width="450" height="450" alt=""/>
+			<img src="/assets/read_the_rules.png" height="350" alt=""/>
 		];
 	}
 }

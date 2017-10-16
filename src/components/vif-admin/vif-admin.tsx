@@ -16,13 +16,20 @@ export class VifAdmin {
 		this.db = window['firebase'].firestore();
 	}
 
-	handleChange(e){
-		console.log(e.target.name);
-		this[e.target.name] = e.target.value;
+	handleMail(e){
+		this.mail = e.target.value;
+	}
+
+	handlePlayer(e){
+		this.player = e.target.value;
+	}
+
+	handleScore(e){
+		this.score = Number(e.target.value);
 	}
 
 	handleSubmit(e) {
-    e.preventDefault();
+		e.preventDefault();
 		this.db.collection('scores')
 			.add({
 				mail:this.mail,
@@ -43,15 +50,15 @@ export class VifAdmin {
 			<form onSubmit={(e) => this.handleSubmit(e)}>
 				<div class="form-group">
 					<label htmlFor="mail">mail</label>
-					<input type="text" name="mail" value={this.mail} onInput={(e) => this.handleChange(e)} />
+					<input type="email" name="mail" value={this.mail} onInput={(e) => this.handleMail(e)} />
 				</div>
 				<div class="form-group">
 					<label htmlFor="player">pseudo/twitter</label>
-					<input type="text" name="player" value={this.player} onInput={(e) => this.handleChange(e)} />
+					<input type="text" name="player" value={this.player} onInput={(e) => this.handlePlayer(e)} />
 				</div>
 				<div class="form-group">
 					<label htmlFor="score">score</label>
-					<input type="number" name="score" value={this.score} onInput={(e) => this.handleChange(e)} />
+					<input type="number" name="score" value={this.score} onInput={(e) => this.handleScore(e)} />
 				</div>
 				<input type="submit" value="save"></input>
 			</form>

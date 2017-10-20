@@ -17,7 +17,7 @@ export class VifScore {
 	componentWillLoad(){
 		console.log('componentWillLoad');
 		this.db
-			.collection('scores')
+			.collection('scores2')
 			.orderBy('score', 'desc')
 			.limit(5)
 			.onSnapshot((snapshot) => {

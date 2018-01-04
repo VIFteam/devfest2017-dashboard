@@ -6,6 +6,7 @@
   "files": [
     "dist"
   ],
+  "main": "electron src/index.js",
   "scripts": {
     "st:generate": "node scripts/generate.js",
     "build": "stencil build",

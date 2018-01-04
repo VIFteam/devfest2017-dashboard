@@ -30,7 +30,7 @@ export class VifAdmin {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.db.collection('scores2')
+		this.db.collection('scores-vif')
 			.add({
 				mail:this.mail,
 				player: this.player,
